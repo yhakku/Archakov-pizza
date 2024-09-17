@@ -54,7 +54,7 @@ export const createOrder = async (data: CheckoutFormValues) => {
         email: data.email,
         phone: data.phone,
         adress: data.adress,
-        comment: data.comment,
+        comment: data.comment ?? '',
         totalAmount: userCart.totalAmount,
         status: OrderStatus.PENDING,
         items: JSON.stringify(userCart.items),
